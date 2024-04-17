@@ -9,15 +9,13 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import io.github.trainingscheduler.ui.theme.TrainingSchedulerTheme
+import io.github.trainingscheduler.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            TrainingSchedulerTheme {
-                // A surface container using the 'background' color from the theme
+            AppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -27,7 +25,6 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-}
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
@@ -36,11 +33,4 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         modifier = modifier
     )
 }
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TrainingSchedulerTheme {
-        Greeting("Android")
-    }
 }
